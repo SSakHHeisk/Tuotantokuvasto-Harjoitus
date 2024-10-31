@@ -1,0 +1,23 @@
+@model IEnumerable<TuotekuvastoApp.Models.Product>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Catalog</title>
+        <link rel="stylesheet" href="~/css/site.css" />
+    </head>
+
+    <body>
+        <div class="product-grid">
+        @foreach (var product in Model)
+        {
+            <div class="product-card">
+            <img src="@product.Image" alt="@product.Name" />
+            <h2>@product.Name</h2>
+            <p>@product.Description</p>
+            <p>Price: $@product.Price</p>
+            </div>
+        }
+        </div>
+        <script src="~/js/site.js"></script>
+    </body>
+</html>
